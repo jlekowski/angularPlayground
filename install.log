@@ -1,0 +1,22 @@
+sudo apt-get install npm
+
+echo '{}' > package.json
+
+npm install karma --save-dev
+
+npm install karma-jasmine karma-chrome-launcher --save-dev
+
+sudo ln -fs /usr/bin/nodejs /usr/local/bin/node
+
+./node_modules/karma/bin/karma start
+
+sudo npm install -g karma-cli
+
+karma start
+
+karma init my.conf.js
+
+karma start my.conf.js --log-level debug --single-run
+
+# must have angular.js and angular-mock.js in defined paths (in this order)
+
